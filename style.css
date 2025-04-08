@@ -1,0 +1,188 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0e; 
+    color:white; 
+    padding: 20px 160px;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+body::before {
+   content:"";/*aqui eu tirei o espaço que tem dentro das aspas, pq quando vc deixa um espaço se vc prescisar usar javaScript ele vai interpretar que tem alguém que no caso seria o espaço*/
+   background: rgb(80, 41, 41);
+   width: 100%; /*coloca 150%*/
+   height: 150%;/*e aqui 200%*/
+   position: absolute;
+   top: 0px;
+   left: -800px; /*aqui mudei para 250px*/
+   transform: rotate(-70deg);
+   
+}
+
+body::after{
+   content:"Nike";
+   position: absolute;
+   top: 50%;
+   left: 40%;/*coloca aqui 50% mesmo*/
+   color: #102c1e;
+   font-size: 250px;
+   font-weight:bold;
+   font-weight: lighter;
+   
+    
+}
+ .logo-nike{ /*Aqui vc esqueceu de  editar o logo*/
+    width: 90px;
+    position:absolute;
+    
+ }
+span{
+  background: #a3be52;
+  /* padding: 5px 10px;  */
+  /* border-radius: 25px;  */
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  /* cursor: pointer; */
+  width: 100px;
+
+   }
+
+   /* h4:hover {
+       background: rgb(241, 6, 6);
+
+   } */
+ h1 {
+    font-size: 80px; 
+     max-width: 500px
+    
+}
+p {
+  font-size: 16px; 
+  margin-bottom: 40px;
+  max-width: 500px;/*Aqui eu substiui por 40px pq se não o logo e o seu "só essa semana vai ficar lá em cima fora da tela, mas seu original é 150px*/
+ 
+}
+
+ .botao-carrinho  {
+   /* background: #a3be52; aqui vou colocar aquele efeito que eu tinha te mostrado em video*/
+   background: linear-gradient(to right, #3498db, #2ecc71);
+   padding: 10px 20px;
+   border-radius: 20px;
+   font-size: 16px;
+   color: black;
+   cursor: pointer;
+  
+   
+   
+   /* opacity: 0.6; content: none; */
+   transition: 0.5s; /* qaundo vc vai colocar valores para o css não pode ser vírgula tem que ser ponto o seu aqui ta 0,5s, assim seu código não vai funcionar eu vou deixar com ponto*/
+   
+ 
+
+}
+
+.botao-carrinho:hover {
+    /* opacity: 0,8; */
+    /* color: blue; */
+    /* background: #974dc9; */
+    background: linear-gradient(to right, #2ecc71, #3498db);
+    opacity: 0.6;
+}
+
+.imagem-nike {
+    
+    width: 950px;
+    transform: rotate(-25deg);
+    margin: +250px;
+    transition: 1s;
+    filter: drop-shadow( 60px 50px 30px rgb(10, 22, 8))
+    /* left: 20px; não precisa colocar essa posição aqui */
+     
+}
+    .troca-efeito {
+        opacity: 0;
+        transform: rotate(-40deg) translateY(-30px);
+        filter: drop-shadow( 60px 50px 50px rgb(255, 0, 0))
+    }
+    
+
+ 
+.caixa-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 600px;na aula ele colocu 75% e eu mantive */
+    height: 75%;
+    z-index: 1;
+    position: relative;
+
+}
+
+.caixa-texto {
+    max-width: 500px;
+
+
+}
+
+.caixa-botoes {
+z-index: 2;  
+position: relative;  
+display: flex;
+gap: 10px;
+
+
+
+        }
+.botoes {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+  transition: transform 0.2s;
+ }
+ .botoes:hover {
+    transform: translateY(-3px);
+
+}
+
+
+
+ .botoes:active {
+    opacity: 0.9;
+ }
+
+
+
+
+
+.verde {
+    background: #ccee66;
+
+}
+
+.rosa {
+    background: #ff9eb5;
+
+}
+
+.azul {
+    background: #58cced;
+}
+
+
+@keyframes cairDeCima {
+    0% {
+        transform:  translateY(-200px);
+        opacity: 0;
+    }
+   100%{
+    transform: translateY(0);
+    opacity: 1;
+   }
+
+}
+.cairDeCima {
+    animation : cairDeCima 0.5s ease-out;
+}
